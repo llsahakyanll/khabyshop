@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <title>khabyshop.am</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="Image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Image/favicon-16x16.png">
+    <link rel="manifest" href="Image/site.webmanifest">
+    <link rel="mask-icon" href="Image/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8a9be494f1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header_div">
+            <a href="index.html">
+                <img src="img/khaby.png" alt="Khaby Lame">
+            </a>
+            <div class="before_nav">
+                <nav class="header_div_nav">
+                    <ul>
+                        <li><a href="#" class="hvr-underline-from-left nav_ul_li_a_padding">Ֆրիլանսերներ</a></li>
+                        <li><a href="#" class="hvr-underline-from-left nav_ul_li_a_padding">Աշխատանք</a></li>
+                        <li><a href="placeOrder.html" class="hvr-underline-from-left nav_ul_li_a_padding">Աշխատանքs</a></li>
+                    </ul>
+                </nav>
+                <div class="header_icons">
+                    <!-- <span href="#" class="header_icons_search">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" viewBox="0 0 512 512">
+                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/>
+                        </svg>
+                    </span> -->
+                    <form id="content">
+                        <input  type="text" name="input" class="input" id="search-input">
+                        <button type="reset" class="search" id="search-btn"></button>
+                    </form>
+                    <span href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="login_reg">
+                <a href="registration.html" class="sing_up hvr-sweep-to-top">
+                    <span>Գրանցվել</span>
+                </a>
+                <a href="login.html" class="log_in">
+                    <svg class="firkk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c17.67 0 32 14.33 32 32v256c0 17.67-14.33 32-32 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c53.02 0 96-42.98 96-96V128C512 74.98 469 32 416 32zM342.6 233.4l-128-128c-12.51-12.51-32.76-12.49-45.25 0c-12.5 12.5-12.5 32.75 0 45.25L242.8 224H32C14.31 224 0 238.3 0 256s14.31 32 32 32h210.8l-73.38 73.38c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0l128-128C355.1 266.1 355.1 245.9 342.6 233.4z"/></svg>
+                    <span class="hvr-underline-from-left nav_ul_li_a_padding">Մուտք</span>
+                </a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+            <a href="index.html">
+                <img src="img/khaby.png" alt="Khaby Lame">
+            </a>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <div class="menu__box">
+                <div class="before_nav">
+                    <ul>
+                        <li><a href="#" class="hvr-underline-from-left nav_ul_li_a_padding">Ֆրիլանսերներ</a></li>
+                        <li><a href="#" class="hvr-underline-from-left nav_ul_li_a_padding">Աշխատանք</a></li>
+                        <li><a href="placeOrder.html" class="hvr-underline-from-left nav_ul_li_a_padding">Աշխատանքs</a></li>
+                    </ul>
+                    <div class="header_icons">
+                        <!-- <span href="#" class="header_icons_search">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" viewBox="0 0 512 512">
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/>
+                            </svg>
+                        </span> -->
+                        <form id="content">
+                            <input  type="text" name="input" class="input" id="search-input">
+                            <button type="reset" class="search" id="search-btn"></button>
+                        </form>
+                        <span href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="login_reg">
+                    <a href="registration.html" class="sing_up hvr-sweep-to-top">
+                        <span>Գրանցվել</span>
+                    </a>
+                    <a href="login.html" class="log_in">
+                        <svg class="firkk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c17.67 0 32 14.33 32 32v256c0 17.67-14.33 32-32 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c53.02 0 96-42.98 96-96V128C512 74.98 469 32 416 32zM342.6 233.4l-128-128c-12.51-12.51-32.76-12.49-45.25 0c-12.5 12.5-12.5 32.75 0 45.25L242.8 224H32C14.31 224 0 238.3 0 256s14.31 32 32 32h210.8l-73.38 73.38c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0l128-128C355.1 266.1 355.1 245.9 342.6 233.4z"/></svg>
+                        <span class="hvr-underline-from-left nav_ul_li_a_padding">Մուտք</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="div"></div>
+    <script src="js/header.js"></script>
+</body>
+</html>
