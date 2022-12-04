@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/support.css">
+    <title>Khabyshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8a9be494f1.js" crossorigin="anonymous"></script>
+    <title>Օգնություն</title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("header.html"); 
+        $("#footer").load("footer.html"); 
+        });
+    </script> 
+</head>
+<body>
+    <div id="header"></div>
+    <main class="contact">
+        <div class="content">
+            <h2>Կապնվել մեզ հետ</h2>
+            <p>Պատասխանը կուղարկվի ձեր էլեկտրոնային հասցեին</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone color_icon" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Հեռախոսահամար</h3>
+                        <p><a class="link_color" href="tel:37491557772">+374 91-55-77-72</a></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o color_icon aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>էլեկտրոնային հասցե</h3>
+                        <p><a class="link_color" href="mailto:freelanceam@workmail.com">freelanceam@workmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Ուղարկել նամակ</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Անուն ազգանուն</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>էլեկտրոնային հասցե</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="" id="" required></textarea>
+                        <span>Գրեք ձեր նամակը...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Ուղարկել">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>
