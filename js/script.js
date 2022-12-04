@@ -23,24 +23,27 @@ $(document).ready(function(){
         dots: true,
         speed: 1200,
         arrows: false,
-        autoplay: true, 
+        // autoplay: true, 
         autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll:1,
         // adaptiveHeight: true,
-        draggable: true,
+        draggable: false,
+        swipe: false,
         // touchThreshold: 10,
         swipe: true,
-        variableWidth: true,
+        variableWidth: false,
         responsive: [
           {
-            breakpoint: 683,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
+              breakpoint: 850,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true,
+              }
           },
-        ]
+      ]
     });
 });
 $('.comm_blocks').slick({
@@ -56,6 +59,7 @@ $('.comm_blocks').slick({
   // pauseOnFocus:true,
   draggable: false,
   cssEase: 'linear',
+  variableWidth: true,
   responsive: [
       {
           breakpoint: 768,
