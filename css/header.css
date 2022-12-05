@@ -60,22 +60,25 @@ header{
     align-items: center;
     column-gap: 20px;
 }
-.header_icons > span {
+.header_icons > button {
     width: 20px;
     height: 20px;
     transition: 0.5s;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
-.header_icons > span > svg {
+.header_icons > button > svg {
     height: 100%;
     width: 100%;
 }
-.header_icons > span:hover {
+.header_icons > button:hover {
     cursor: pointer;
 }
-.header_icons > span:hover > svg > path {
+.header_icons > button:hover > svg > path {
     fill: #2B2E3C;
 }
-.sticky_header .header_icons > span > svg > path {
+.sticky_header .header_icons > button > svg > path {
     fill: #fff;
 }
 

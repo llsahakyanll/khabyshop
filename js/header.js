@@ -25,3 +25,9 @@ $( ".search" ).click(function() {
     myFunction(x)
     x.addListener(myFunction)
 });
+$( ".basket__icon" ).click(function() {
+    $('body').addClass('body__toggle');
+    $('body').append("<div class='epmty'></div");
+    $('.basket').removeClass('basket__active__no');
+    $('.basket').addClass('basket__active');
+});
