@@ -1,8 +1,10 @@
 $(document).ready(function(){
+
   $("#header").load("header.html"); 
   $("#footer").load("footer.html");
   $('.basket__main .items__main__item__menu__tab__text__count > button:nth-child(2)').addClass('add__to__card');
-  $('.add__to__card').text("Buy");
+ 
+
   $('.first__block').slick({
       infinite: true,
       dots: true,
@@ -110,16 +112,7 @@ checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove
 
 
 
-// function inc(element) {
-//   let el = document.querySelector(`[name="${element}"]`);
-//   el.value = parseInt(el.value) + 1;
-// }
-// function dec(element) {
-//   let el = document.querySelector(`[name="${element}"]`);
-// 	if (parseInt(el.value) > 0) {
-// 	  el.value = parseInt(el.value) - 1;
-//   }
-// }
+
 
 $( ".items__main__item__menu__tab__text__count__plus" ).click(function() {
   let el = $(this).parent().children('input').attr('value');
@@ -140,9 +133,11 @@ $( ".item___button" ).click(function() {
 
 $( ".items__main__item__menu__eye" ).click(function() {
   $('body').addClass('body__toggle');
-  $('body').append("<div class='epmty'></div");;
+  $('body').append("<div class='epmty'></div>");
   $(this).parent().parent().parent().parent().toggleClass('HELLO');
   $('.HELLO').children('.items__main__item__menu__tab').toggleClass('items__main__item__menu__tab__active');
+  $('.HELLO').children('.items__main__item__menu__tab').find('.basket__main__a').remove();
+  $('.HELLO').children('.items__main__item__menu__tab').find('.basket__main__button__close').css("display", "none");
 });
 $( ".items__main__item__menu__tab__close" ).click(function() {
   $('.HELLO').children('.items__main__item__menu__tab').removeClass('items__main__item__menu__tab__active');
@@ -150,9 +145,7 @@ $( ".items__main__item__menu__tab__close" ).click(function() {
   $( ".epmty" ).remove();
   $('body').removeClass('body__toggle');
 })
-// $( ".items__main__item__menu__eye" ).click(function() {
-//   $(body).html('')
-// })
+
 
 $( ".basket__close" ).click(function() {
   $('body').removeClass('body__toggle');
@@ -160,13 +153,74 @@ $( ".basket__close" ).click(function() {
   $('.basket').removeClass('basket__active');
   $('.basket').addClass('basket__active__no');
 });
-// $("p").clone().appendTo("body");
+
+$( ".lox" ).click(function() {
+  alert("Hi")
+  // let el = $(this).parent().find('input').attr('value');
+  // $(this).parent().children('input').attr('value', parseInt(el) + 1)
+});
+
 $('.items__main__item__menu__cart').click(function() {
-  alert("FA")
-  $(this).parent().parent().parent().parent().children('.items__main__item__menu__tab').addClass('Please');
-  $('.Please').clone().appendTo('.basket__main');
-  $(this).parent().parent().parent().parent().children('.items__main__item__menu__tab').remove();
+  alert("items__main__item__menu__cart");
+
+  $(this).parent().parent().parent().parent().children('.items__main__item__menu__tab').addClass('basket__item__block').clone().appendTo('.basket__main');
+  $('.basket__main ').find('.items__main__item__menu__tab__img').remove();
+  let x = $(this).parent().parent().parent().parent().find('.items__main__item__menu__tab')
+  .find('.items__main__item__menu__tab__text__count').find('input').attr('value');
+  $(this).parent().parent().parent().parent().find('.items__main__item__menu__tab')
+  .find('.items__main__item__menu__tab__text__count').remove();
+  $('.basket__item__block').find('.add__to__cart__button').text("Buy");
+  $('.basket__item__block').prepend("<a class='basket__main__a' href='#'><img src='' alt='image'></a>");
+  $('.basket__item__block').append("<button class='basket__main__button__close'><i class='fa-solid fa-circle-xmark'></i></button>");
+  $('.basket__item__block').find('.items__main__item__menu__tab__text__count').prepend('<p class="basket__main__quantity">Quantity - <span></span> </p>');
+  $('.basket__item__block').find('.basket__main__quantity').find('span').append(x);
+  $('.basket__item__block').find('.items__main__item__menu__tab__text__count').find('div').remove();
+  $('.basket__item__block').children('.basket__main__a').find('img').attr("src", $(this).parent().parent().find('.items__main__item__img__img').find('img').attr('src'));
+  $('.basket__item__block').removeClass('basket__item__block');
+  $(this).remove();
 })
+$( ".basket__main__button__close" ).click(function() {
+  alert("ASDA")
+  $(this).parent().remove();
+});
 
 
-// 2 parent
+
+$('.add__to__cart__button').click(function() {
+  $(this).parent().parent().parent().addClass('basket__item__block').clone().appendTo('.basket__main');
+  $('.basket__main ').find('.items__main__item__menu__tab__active ').removeClass('items__main__item__menu__tab__active');
+  $('.basket__main ').find('.items__main__item__menu__tab__img').remove()
+  $('.basket__item__block').prepend("<a class='basket__main__a' href='#'><img src='' alt='image'></a>");
+  $('.HELLO').find('.basket__main__a').remove();
+  let z = $(this).parent().parent().parent().parent().find('.items__main__item__img__img').find('img').attr('src');
+    $('.basket__item__block').children('.basket__main__a').find('img').attr("src", z);
+  $('.HELLO').find('.basket__main__button__close').remove();
+//-----------------------------------|                 |-----------------------------------
+  $('.basket__item__block').append("<button class='basket__main__button__close'><i class='fa-solid fa-circle-xmark'></i></button>");
+  $('.HELLO').find('.basket__main__button__close').remove();
+  
+  
+  $('.basket__item__block').find('.items__main__item__menu__tab__text__count').prepend('<p class="basket__main__quantity">Quantity - <span></span> </p>');
+  $('.HELLO').find('.basket__main__quantity').remove();
+
+
+  let x = $(this).parent().parent().parent().parent().find('.items__main__item__menu__tab')
+    .find('.items__main__item__menu__tab__text__count').addClass('lox').find('input').attr('value');
+  $('.basket__item__block').find('.basket__main__quantity').find('span').append(x);
+
+  $('.basket__main ').find('.add__to__cart__button').text("Buy");
+  $('.basket__item__block').find('.items__main__item__menu__tab__text__count').find('div').remove();
+
+
+  $('.basket__item__block').find('.items__main__item__menu__tab__text__count').find('.add__to__cart__button').addClass('lox').removeClass('add__to__cart__button');
+
+
+//-----------------------------------|                 |-----------------------------------
+  $('.HELLO').find('.items__main__item__menu__tab__text__count').find('div').remove();
+  $('.basket__item__block').removeClass('basket__item__block');
+  $(this).remove();
+});
+
+$('.lox').click(function() {
+  alert('Lox')
+});
