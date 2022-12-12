@@ -26,8 +26,12 @@ $( ".search" ).click(function() {
     x.addListener(myFunction)
 });
 $( ".basket__icon" ).click(function() {
-    $('body').addClass('body__toggle');
-    $('body').append("<div class='epmty'></div>");
-    $('.basket').removeClass('basket__active__no');
-    $('.basket').addClass('basket__active');
+    if($('.basket__main').children().length == 0 || $('.basket__main').children().css('display') == 'none') {
+        alert("Basket is Empty") 
+    } else {
+        $('body').addClass('body__toggle');
+        $('body').append("<div class='epmty'></div>");
+        $('.basket').removeClass('basket__active__no');
+        $('.basket').addClass('basket__active');
+    }
 });
