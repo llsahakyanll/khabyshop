@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pay.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Pay</title>
+</head>
+<body>
+    <section>
+        <div class="container__main">
+            <a href="index.html">
+                <img src="img/khaby.png" alt="">
+            </a>
+            <h1>Shipping</h1>
+            <p>Please enter your shipping details.</p>
+            <hr />
+            <div class="container">
+                <div class="form">  
+                    <div class="fields fields--2">
+                        <label class="field">
+                            <span class="field__label" for="firstname">First name</span>
+                            <input class="field__input" type="text" id="firstname" value="" />
+                        </label>
+                        <label class="field">
+                            <span class="field__label" for="lastname">Last name</span>
+                            <input class="field__input" type="text" id="lastname" value="" />
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span class="field__label" for="email">email</span>
+                        <input class="field__input" type="text" id="email" value="" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label" for="phone">Phone Number</span>
+                        <input class="field__input" type="number" id="phone" value="" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label" for="address">Address</span>
+                        <input class="field__input" type="text" id="address" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label" for="country">Country</span>
+                        <select class="field__input" id="country">
+                            <option value=""></option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                            <option value="unitedstates">United States</option>
+                        </select>
+                    </label>
+                    <div class="fields fields--3">
+                        <label class="field">
+                            <span class="field__label" for="zipcode">Zip code</span>
+                            <input class="field__input" type="number" id="zipcode" />
+                        </label>
+                        <label class="field">
+                            <span class="field__label" for="city">City</span>
+                            <input class="field__input" type="text" id="city" />
+                        </label>
+                        <label class="field">
+                            <span class="field__label" for="state">State</span>
+                            <select class="field__input" id="state">
+                                <option value=""></option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <button class="button">Continue</button>
+            </div>
+            <div class="credit__card">
+                <label class="field">
+                    <span class="field__label" for="number">Card Number</span>
+                    <input class="field__input" type="number" id="number" value="" />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="Cardholder">Cardholder name</span>
+                    <input class="field__input" type="text" id="Cardholder" value="" />
+                </label>
+                <div class="fields fields--3">
+                    <label class="field">
+                        <span class="field__label" for="expiration">Expiration date (MM / YY)</span>
+                        <input class="field__input" type="number" id="expiration" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label" for="code">Security code</span>
+                        <input class="field__input" type="number" id="code"/>
+                    </label>
+                </div>
+                <div class="credit__card__pay">
+                    <button class="return">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                        </svg>
+                        <span>Return to shipping details</span> 
+                    </button>
+                    <button class="button__pay">Pay</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart__and__sum">
+            <div class="items">
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/a350c8f2cb9bd666b0e0bc3bc72a6cc7_600x.png" alt="">
+                        <div>1</div>
+                    </div>
+                    <p>Key Chain&Decorative Hook&Cup Pad&Sticker</p>
+                    <span>֏8,100.00</span>
+                </div>
+            </div>
+            <div class="subtotal__and__shipping">
+                <div class="subtotal__and__shipping__first">
+                    <p>Subtotal</p>
+                    <span>֏16,200.00</span>
+                </div>
+                <div class="subtotal__and__shipping__second">
+                    <p>Subtotal</p>
+                    <span>֏16,200.00</span>
+                </div>
+            </div>
+            <div class="totoal">
+                <p>Total</p>
+                <span>֏17,500.00</span>
+            </div>
+        </div>
+    </section>
+    <script src="js/pay.js"></script>
+</body>
+</html>

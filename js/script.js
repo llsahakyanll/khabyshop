@@ -184,11 +184,9 @@ $('.add__to__cart__button').click(function() {
     }
   });
 
-  $('.basket__main ').find('.add__to__cart__button').text("Buy");
 
-
-  $('.basket__item__block').find('.items__main__item__menu__tab__text__count').find('.add__to__cart__button').removeClass('add__to__cart__button');
-
+  $('.basket__main').find('.items__main__item__menu__tab__text__count').find('.add__to__cart__button').hide();
+  $('.basket__main').find('.items__main__item__menu__tab__text__count').append('<a href="../pay.html">Buy</a>')
 
   $('.basket__main__button__close').click(function() {
     $(this).parent().remove();

@@ -997,7 +997,6 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
         flex-direction: column;
     }
 }
-
 @media screen and (max-width: 1180px) {
     .items__main__item__menu__tab {
         left: 5%;
@@ -1150,4 +1149,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     .basket__main__button__close {
         right: 7px;
     }
+}
+
+/*---------------------| Max Height |---------------------*/
+
+@media screen and (max-height: 698px) {
+
 }
