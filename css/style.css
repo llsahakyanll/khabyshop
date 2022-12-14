@@ -297,6 +297,12 @@ main {
     flex-direction: column;
     width: 320px;
     row-gap: 10px;
+} 
+.items__main__item > span {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .items__main__item__img > a > img{
     width: 100%;
@@ -304,6 +310,9 @@ main {
     object-fit: cover;
 }
 .items__main__item > a:nth-child(2) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 79px;
     color: #282828;
     font-style: normal;
     font-weight: bold;
@@ -447,6 +456,12 @@ main {
     transition: .7s;
     padding: 35px 35px 38px 35px;
 }
+.comm_blocks_element > p {
+    max-height: 76px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .comm_blocks_element:hover {
     box-shadow: rgba(43, 46, 60, 0.4) -5px 5px, rgba(43, 46, 60, 0.3) -10px 10px, rgba(43, 46, 60, 0.2) -15px 15px, rgba(43, 46, 60, 0.1) -20px 20px, rgba(43, 46, 60, 0.05) -25px 25px;
 }
@@ -527,18 +542,18 @@ main {
 .items__main__item__menu__tab {
     display: flex;
     position: fixed;
-    left: 40vh;
-    top: 23vh;
     z-index: 3;
     visibility: hidden;
     opacity: 0;
+    top: 50%  !important;
+    left: 50% !important;
     transform: translate(0px , 100%);
     transition: .5s;
 }
 .items__main__item__menu__tab__active {
     visibility: visible !important;
     opacity: 1 !important;
-    transform: translate(0px , 0px) !important;
+    transform: translate(-50%, -50%) !important;
 }
 .items__main__item__menu__tab__img {
     width: 583px;
@@ -570,6 +585,10 @@ main {
     row-gap: 6px;
 }
 .items__main__item__menu__tab__text__text > a {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-family: 'Roboto';
     color: #282828;
     font-size: 17px;
@@ -583,6 +602,10 @@ main {
     opacity: .8;
 }
 .items__main__item__menu__tab__text__text > p {
+    max-height: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* white-space: nowrap; */
     margin-top: 30px;
     font-family: 'Roboto';
     color: #696969;
@@ -750,24 +773,24 @@ main {
 .item___button__active > svg {
     transform: rotate(180deg);
 }
-.items__main__item__menu__tab__text > button{
+.items__main__item__menu__tab__close{
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: 5px;
+    right: 5px;
     outline: none;
-    border: 1px solid #282828;
-    background-color: #fff;
-    width: 50px;
-    height: 50px;
+    border: none;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     cursor: pointer;
     justify-content: center;
+    background-color: transparent;
     border-radius: 10px;
 }
-.items__main__item__menu__tab__text > button > svg{
-    width: 20px;
-    height: 20px;
+.items__main__item__menu__tab__close > i {
+    font-size: 25px;
+    color: #282828;
 }
 .items__main__item__menu__tab__img .slick-arrow{
     z-index: 1;
@@ -793,16 +816,19 @@ main {
     /* max-width: 1440px; */
     width: 80%;
     transition: .5s;
-    left: 10%;
-    right: 10%;
     visibility: hidden;
     opacity: 0;
-    top: 10vh;
-    bottom: 10vh;
-    transform: translate(0, -30%);     
     z-index: 3;
     background-color: #fff;
     /* overflow-x: hidden; */
+    top: 50%  !important;
+    left: 50% !important;
+    transform: translate(0px , 100%);
+}
+.basket__active  {
+    transform: translate(-50% , -50%) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 .basket__main {
     display: flex;
@@ -812,14 +838,22 @@ main {
     height: 100%;
     background-color: #fff;
     overflow-y: auto;
+    
 }
-.basket__active  {
-    transform: translate(0px , 0px) !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+.basket__main .items__main__item__menu__tab__text {
+    overflow: hidden;
 }
-.basket__active__no  {
-    transform: translate(0px , 30%) !important;
+.basket__main .items__main__item__menu__tab {
+    padding-top: 0px !important;
+}
+.basket__main .items__main__item__menu__tab  .items__main__item__menu__tab__text__count > :nth-child(3) {
+    width: 120px;
+}
+.items__main__item__menu__tab__text__text > span {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .basket__close {
     border: none;
@@ -833,7 +867,7 @@ main {
     z-index: 4;
 }
 .basket .items__main__item__menu__tab {
-    position: relative;
+    position: unset;
     left: unset;
     top: unset;
     display: flex;
@@ -1014,19 +1048,16 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 @media screen and (max-width: 1050px) {
     .items__main__item__menu__tab {
-        flex-direction: column-reverse;
-        row-gap: 0px;
-        top: 35px;
+        left: 5%;
     }
     .items__main__item__menu__tab__text {
-        width: 100%;
-        height: 400px;
-        padding: 15px;    
+        width: 427px;
+        height: 460px;
     }
     .items__main__item__menu__tab__img,
     .items__main__item__menu__tab__img > div > div > a {
-        width: 276px !important;
-        height: 263px !important;
+        width: 460px !important;
+        height: 460px !important;
     }
 
     .basket__main .items__main__item__menu__tab {
@@ -1045,13 +1076,14 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
         height: unset;
     }
 }   
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 970px) {
     .items__main__item__menu__tab {
-        left: 0;
-        right: 0;
+        left: 3%;
     }
-    .items__main__item__menu__tab__text > button {
-        right: 0px;
+}   
+@media screen and (max-width: 930px) {
+    .items__main__item__menu__tab {
+        left: 1%;
     }
 }   
 @media screen and (max-width: 900px) {
@@ -1076,6 +1108,32 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     .items__main__item__menu__tab__text__text > p {
         margin-top: 0;
     }
+    .items__main__item__menu__tab__img  {
+        margin: 0 auto 30px auto;
+    }
+    .items__main__item__menu__tab__img, .items__main__item__menu__tab__img > div > div > a {
+        width: 320px !important;
+        height: 320px !important;
+    }
+    .items__main__item__menu__tab {
+        top: 0;
+        flex-direction: column;
+        padding-top: 30px;
+        left: 28%;
+        height: 100vh;
+        background: #fff;
+    }
+    .items__main__item__menu__tab__text {
+        padding-top: 0;
+        width: 427px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .items__main__item__menu__tab__text__shipping__items {
+        overflow-y: unset;
+        overflow-x: unset;
+    }
 }
 @media screen and (max-width: 771px) {
     .basket__main > div > a,
@@ -1089,8 +1147,16 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     .basket .basket__main > div {
         height: unset;
     }
+    .basket__main .items__main__item__menu__tab {
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+    }
     .basket__main__button__close {
         position: absolute;
+    }
+    .items__main__item__menu__tab {
+        left: 14%;
     }
 }
 @media screen and (max-width: 700px) {
@@ -1104,9 +1170,14 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
         height: 370px !important;
     }
 }
+@media screen and (max-width: 550px) {
+    .items__main__item__menu__tab {
+        left: 7%;
+    }
+}
 @media screen and (max-width: 506px) {
     .items__main__item__menu__tab__text {
-        row-gap: 8px;
+        row-gap: 20px;
     }
     .items__main__item__menu__tab__text__text > p {
         margin-top: 10px;
@@ -1127,6 +1198,20 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
         row-gap: 10px;
     }    
 }
+@media screen and (max-width: 480px) {
+    .items__main__item__menu__tab {
+        left: 4%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .items__main__item__menu__tab {
+        width: 100%;
+        left: 0%;
+    }
+    .items__main__item__menu__tab__text {
+        width: 100%;
+    }
+}
 @media screen and (max-width: 360px) {
     .items__main__item__menu__tab__text__count > :nth-child(2) {
         width: 130px;
@@ -1134,9 +1219,6 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     }
     .items__main__item__menu__tab__text__count > div:nth-child(1) {
         width: 90px;
-    }
-    .items__main__item__menu__tab {
-        top: 16px;
     }
     .items__main__item__menu__tab__text__shipping__items > div {
         padding-top: 5px;

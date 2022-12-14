@@ -57,7 +57,7 @@ $(document).ready(function(){
                 slidesToScroll: 1,
                 infinite: true,
                 adaptiveHeight: true,
-                dots: true,
+                dots: false,
             }
         },
     ]
@@ -186,17 +186,25 @@ $('.add__to__cart__button').click(function() {
 
 
   $('.basket__main').find('.items__main__item__menu__tab__text__count').find('.add__to__cart__button').hide();
-  $('.basket__main').find('.items__main__item__menu__tab__text__count').append('<a href="../pay.html">Buy</a>')
+  $('.basket__item__block').find('.items__main__item__menu__cart').hide();
+  $('.basket').find('.basket__item__block').find('.items__main__item__menu__tab__text__count').append('<a href="../pay.html">Buy</a>')
 
-  $('.basket__main__button__close').click(function() {
+  let index = $('.HELLO').index();
+
+
+  $('.HELLO').addClass(`added-${index}`);
+  $('.basket__item__block').addClass(`added-${index}`);
+
+
+  $($('.basket__main').children(`.added-${index}`).children('.basket__main__button__close')).click(function() {
     $(this).parent().remove();
     if($('.basket__main').children().length == 0 || $('.basket__main').children().css('display') == 'none') {
       $('.basket__close').trigger('click');
     }
-    $('.items__main__item__menu__tab').parent().find('.items__main__item__menu__cart').show();
-    $('.items__main__item__menu__tab').find('.items__main__item__menu__tab__text__count').find('div').show();
-    $('.items__main__item__menu__tab').find('.items__main__item__menu__tab__text__count').children('button').show();
-      
+    $('.items__main__main').find(`.added-${index}`).find('.items__main__item__menu__tab__text__count').show();
+    $('.items__main__main').find(`.added-${index}`).find('.items__main__item__menu__tab__text__count').children('div').show();
+    $('.items__main__main').find(`.added-${index}`).find('.items__main__item__menu__tab__text__count').children('button').show();
+    $('.items__main__main').find(`.added-${index}`).parent().children('.items__main__item').find('.items__main__item__menu__cart').show();
   })
 
 //-----------------------------------|                 |-----------------------------------
@@ -207,6 +215,12 @@ $('.add__to__cart__button').click(function() {
 
 $('.items__main__item__menu__cart').click(function() {
   $(this).parent().parent().parent().parent().children('.items__main__item__menu__tab').addClass('basket__item__block').clone().appendTo('.basket__main');
+
+  let index = $(this).parent().parent().parent().parent().index();
+
+  $(this).parent().parent().parent().parent().children('.items__main__item__menu__tab').addClass(`added-${index}`);
+  $('.basket__item__block').addClass(`added-${index}`);
+  
   $('.basket__main ').find('.items__main__item__menu__tab__img').remove();
   $(this).parent().parent().parent().parent().find('.items__main__item__menu__tab')
   .find('.items__main__item__menu__tab__text__count').hide();
@@ -223,26 +237,24 @@ $('.items__main__item__menu__cart').click(function() {
     }
   });
 
-  
 
+    $('.basket__item__block').find('.add__to__cart__button').hide();
+    $('.basket').find('.basket__item__block').find('.items__main__item__menu__tab__text__count').append('<a href="../pay.html">Buy</a>')
 
-    $('.basket__item__block').find('.add__to__cart__button').text("Buy");
     $('.basket__item__block').prepend("<a class='basket__main__a' href='#'><img src='' alt='image'></a>");
     $('.basket__item__block').append("<button class='basket__main__button__close'><i class='fa-solid fa-circle-xmark'></i></button>");
     $('.basket__item__block').children('.basket__main__a').find('img').attr("src", $(this).parent().parent().find('.items__main__item__img__img').find('img').attr('src'));
-    $('.basket__item__block').removeClass('basket__item__block');
 
-    $('.basket__main__button__close').click(function() {
+    $($('.basket__main').children(`.added-${index}`).children('.basket__main__button__close')).click(function() {
       $(this).parent().remove();
       if($('.basket__main').children().length == 0) {
         $('.basket__close').trigger('click');
       }
-      alert("lox")
-      $('.items__main__item__menu__tab').find('.items__main__item__menu__tab__text__count').show();
-      $('.items__main__item__menu__tab').find('.items__main__item__menu__tab__text__count').children('div').show();
-      $('.items__main__item__menu__tab').find('.items__main__item__menu__tab__text__count').children('button').show();
-      $('.items__main__item__menu__cart').show();
+      $('.items__main__main').find(`.added-${index}`).find('.items__main__item__menu__tab__text__count').show();
+      $('.items__main__main').find(`.added-${index}`).find('.items__main__item__menu__tab__text__count').children('div').show();
+      $('.items__main__main').find(`.added-${index}`).find('.items__main__item__menu__tab__text__count').children('button').show();
+      $('.items__main__main').find(`.added-${index}`).parent().children('.items__main__item').find('.items__main__item__menu__cart').show();
     })
-
+  $('.basket__item__block').removeClass('basket__item__block');
   $(this).hide();
 })
