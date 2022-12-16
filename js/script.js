@@ -258,3 +258,8 @@ $('.items__main__item__menu__cart').click(function() {
   $('.basket__item__block').removeClass('basket__item__block');
   $(this).hide();
 })
+
+let loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+  loader.style.display= "none";
+});
